@@ -1,5 +1,5 @@
 # tic tac toe game
-import random
+import random, sys
 
 def main():
     board = {'top-left': ' ', 'top-mid': ' ', 'top-right': ' ', 'mid-left': ' ', 'mid-mid': ' ', 'mid-right': ' ', 'bot-left': ' ', 'bot-mid': ' ', 'bot-right': ' '}
@@ -51,7 +51,7 @@ def assign_position(user_input, board):
 
     if(check_win(player, board)):
         print("You have won!")
-        exit()
+        sys.exit()
 
     # pc move
     print("Computer making move...")
@@ -63,7 +63,7 @@ def assign_position(user_input, board):
     draw_board(board)
     if(check_win(computer, board)):
         print("The computer has won!")
-        exit()
+        sys.exit()
     
 
 
